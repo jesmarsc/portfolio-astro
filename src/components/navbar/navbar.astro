@@ -1,0 +1,24 @@
+---
+import Link from "@/components/link.astro";
+import ArrowLink from "@/components/arrow-link.astro";
+
+import { routes, links } from "@/constants";
+
+import styles from "./styles.module.css";
+---
+
+<div class="sticky top-0 z-10 bg-black/60 backdrop-blur py-4">
+  <nav
+    class="flex flex-wrap items-center gap-4 max-w-body mx-auto justify-between px-4 text-sm"
+  >
+    <Link href={routes.HOME}>
+      Jesmar <span class="max-sm:hidden">Castillo</span>
+    </Link>
+
+    <div class={styles.NavMenu}>
+      <ArrowLink href={links.EMAIL}>Email</ArrowLink>
+      <ArrowLink href={links.GITHUB}>GitHub</ArrowLink>
+      <ArrowLink href={links.LINKEDIN}>LinkedIn</ArrowLink>
+    </div>
+  </nav>
+</div>

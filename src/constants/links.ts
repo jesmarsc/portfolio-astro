@@ -1,0 +1,16 @@
+export const links = Object.freeze({
+  EMAIL: "mailto:contact@jesmar.dev",
+  FCAOOC: "https://fastcheapandoutofcontrol.com/",
+  GITHUB: "https://github.com/jesmarsc",
+  LINKEDIN: "https://www.linkedin.com/in/jesmar-castillo/",
+  PORTFOLIO_GITHUB: "https://github.com/jesmarsc/personal-website",
+  PORTFOLIO: "https://jesmar.dev/",
+  RPCIEGE: "https://rpciege.com/",
+  SCF: "https://communityfund.stellar.org/",
+  SORTING_VISUALIZER_GITHUB: "https://github.com/jesmarsc/sorting-visualizer",
+  SORTING_VISUALIZER: "https://sort.jesmar.dev/",
+  STELLAR_DOCS: "https://developers.stellar.org/docs",
+  STELLAR_QUEST: "https://quest.stellar.org/",
+  STELLAR_VISUALIZER_GITHUB: "https://github.com/jesmarsc/stellar3d/tree/main",
+  STELLAR_VISUALIZER: "https://space.jesmar.dev/",
+});

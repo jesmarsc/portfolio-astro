@@ -1,0 +1,52 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { Picture } from "astro:assets";
+
+import Link from "./link.astro";
+
+type Props = HTMLAttributes<"div"> & {
+  date: string;
+  description: string;
+  href: string;
+  src: ImageMetadata;
+  technologies: string[];
+  title: string;
+};
+
+const { date, description, href, src, technologies, title, ...props } =
+  Astro.props;
+---
+
+<div {...props} class:list={[props.class, "pt-6 border-t border-neutral-700"]}>
+  <div
+    class="grid items-start gap-2 md:gap-8 md:grid-cols-[auto_minmax(20ch,1fr)_3fr_auto]"
+  >
+    <p class="text-sm text-neutral-400">{date}</p>
+
+    <Link href={href} class="max-w-max">
+      <h4
+        class="cursor-pointer text-2xl font-medium underline underline-offset-8 decoration-neutral-700 hover:decoration-white transition-all"
+      >
+        {title}
+      </h4>
+    </Link>
+
+    <p class="text-sm md:max-w-[40ch]">{description}</p>
+
+    <div class="text-sm text-neutral-400">
+      {technologies.join(" · ")}
+    </div>
+  </div>
+
+  <Link href={href} aria-label={title}>
+    <Picture
+      src={src}
+      alt=""
+      class="mt-6 rounded-lg md:rounded-3xl w-full"
+      formats={["webp", "jpeg"]}
+      fallbackFormat="jpeg"
+      widths={[src.width / 2, src.width]}
+      sizes={"(min-width: 1440px) 1440px, calc(100vw - 2rem)"}
+    />
+  </Link>
+</div>
