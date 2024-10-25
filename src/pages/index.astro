@@ -4,30 +4,30 @@ import BaseLayout from "@/layouts/base-layout.astro";
 import ArrowLink from "@/components/arrow-link.astro";
 import Card from "@/components/project-card.astro";
 
-import rpciegeImg from "@/assets/rpciege.webp";
-import fca00cImg from "@/assets/fca00c.webp";
-import devImg from "@/assets/dev-docs.webp";
-import scfImg from "@/assets/scf.webp";
-import sqImg from "@/assets/stellar-quest.webp";
+import rpciegeImg from "@/assets/rpciege.jpg";
+import fca00cImg from "@/assets/fca00c.jpg";
+import devImg from "@/assets/dev-docs.jpg";
+import scfImg from "@/assets/stellar-community-fund.jpg";
+import sqImg from "@/assets/stellar-quest.jpg";
 
-import stellarNetworkVisualizerImg from "@/assets/stellar-network-visualizer.webp";
-import sortingImg from "@/assets/sorting-visualizer.webp";
+import stellarNetworkVisualizerImg from "@/assets/stellar-network-visualizer.jpg";
+import sortingImg from "@/assets/sorting-visualizer.jpg";
 
 import "@/styles/globals.css";
 ---
 
 <BaseLayout>
   <div
-    class="my-40 grid gap-4 md:grid-cols-[minmax(max-content,1fr)_fit-content(65ch)] max-w-7xl mx-auto items-start"
+    class="my-40 md:my-60 grid gap-8 lg:grid-cols-2 max-lg:max-w-2xl mx-auto items-start"
   >
-    <ArrowLink href={links.EMAIL} class="md:justify-self-center">
-      contact@jesmar.dev
-    </ArrowLink>
+    <div class="lg:text-right lg:justify-self-center">
+      <h1 class="text-4xl md:text-6xl font-medium">Jesmar Castillo</h1>
+      <ArrowLink href={links.EMAIL}>contact@jesmar.dev</ArrowLink>
+    </div>
 
-    <p class="text-5xl tracking-tighter font-medium">
-      Hello! I'm a Los Angeles based{" "}
-      <span class="underline">Frontend Developer</span> that enjoys bringing concepts
-      to life.
+    <p class="text-3xl md:text-5xl tracking-tighter font-medium">
+      Hello! I'm a Los Angeles based Frontend Developer that enjoys bringing
+      concepts to life.
     </p>
   </div>
 
@@ -39,7 +39,7 @@ import "@/styles/globals.css";
     <div class="mt-8 space-y-10 md:space-y-20">
       <Card
         date="2024"
-        description="A series of small coding puzzles aimed at teaching you the basics of Rust development for smart contracts on the Stellar network."
+        description="A series of coding puzzles aimed at teaching you the basics of Rust development for smart contracts on the Stellar network."
         src={rpciegeImg}
         technologies={["React", "Next.js"]}
         title="RPCiege"

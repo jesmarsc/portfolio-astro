@@ -19,5 +19,9 @@ const isActive = Astro.url.pathname === href;
 <a
   {...defaultProps}
   {...Astro.props}
-  class:list={[Astro.props.class, isActive && "active"]}><slot /></a
+  class:list={[Astro.props.class, isActive && "active"]}
 >
+  <slot />
+
+  {isExternalLink ? <span class="sr-only"> (opens in a new tab)</span> : null}
+</a>

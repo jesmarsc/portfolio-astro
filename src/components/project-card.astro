@@ -1,6 +1,6 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
 import Link from "./link.astro";
 
@@ -38,15 +38,12 @@ const { date, description, href, src, technologies, title, ...props } =
     </div>
   </div>
 
-  <Link href={href} aria-label={title}>
-    <Picture
-      src={src}
-      alt=""
-      class="mt-6 rounded-lg md:rounded-3xl w-full"
-      formats={["webp", "jpeg"]}
-      fallbackFormat="jpeg"
-      widths={[src.width / 2, src.width]}
-      sizes={"(min-width: 1440px) 1440px, calc(100vw - 2rem)"}
-    />
-  </Link>
+  <Image
+    src={src}
+    alt=""
+    class="mt-6 rounded-lg md:rounded-3xl w-full"
+    widths={[src.width / 2, src.width]}
+    sizes={"(min-width: 1440px) 1440px, calc(100vw - 2rem)"}
+    format="jpg"
+  />
 </div>
